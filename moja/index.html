@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="Pl">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Chcesz być moją Walentynką?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Fajny obrazek">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "takButton" onclick="nextPage()">Tak</button>
+                <button class="btn" id="nieButton" onmouseover="moveButton()">Nie</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "tak.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('nieButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('nieButton').offsetHeight);
+                        document.getElementById('nieButton').style.left = `${x}px`;
+                        document.getElementById('nieButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
